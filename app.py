@@ -5,7 +5,7 @@ import requests
 API_URL = "https://api-inference.huggingface.co/models/codenamewei/speech-to-text"
 headers = {"Authorization": "Bearer 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"}
 
-app = Flask(_name_)
+app = Flask(__name__)
 @app.route('/index',methods=['GET','POST'])
 def index():
     return 'hello world'
@@ -27,5 +27,5 @@ def result():
         spech = 'https://agrithon.up.railway.app/text'
         pred = tex(spech,text)
         return pred
-if _name_ == "_main_":
+if __name_ == "__main__":
     app.run(debug=True)
